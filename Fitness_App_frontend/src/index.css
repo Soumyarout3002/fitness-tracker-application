@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+@import "tailwindcss";
+
+
+
+
+ .typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style:italic;
+  font-size: 4rem;
+  color: #ff6a00;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ff6a00;
+
+  width: 0;
+  animation: typing 3s steps(1000) forwards, blink 0.7s step-end 6,hideCursor 0.5s 4s forwards;
+  
+}
+
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 36ch; } 
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes hideCursor {
+  to { border-right: 0; }
+}
